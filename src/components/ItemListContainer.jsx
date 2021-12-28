@@ -1,15 +1,10 @@
 import React from 'react'
+import ItemCount from './ItemCount'
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
 
-    const alerta = () => {
-        alert(props.mensaje)
-    }
-    
     return (
-        <>
-            <button className='btn btn-dark mt-5' onClick={alerta}>Información Acá</button>           
-        </>
+        <ItemCount stock={5} initial={1}/>
     )
 
 }
