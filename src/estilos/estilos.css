@@ -1,19 +1,96 @@
+/* ESTILOS GENERALES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* NAVBAR */
+.logo{
+    width: 350px;
+    height: 70px;
+    margin: 15px 0 15px 0
+}
+
+.nav-item:hover{
+    background: #000;
+    border-radius: 5px;
+}
+
 .cart{
     margin-right: 20px;
 }
 
 .containerCount{
     width: 200px;
-    margin: 0 auto;
+    margin-top: 15px;
+    display: flex;
+}
+
+.containerCount div input{
+    width: 60px;
+    margin:  0 10px 0 10px;
+}
+
+.containerCount div button{
+    width: 50px;
+}
+
+.btn-compra{
+    margin-top: 30px;
 }
 
 .containerCard{
     display: flex;
     justify-content: space-around;
     margin-top: 15px;
+    flex-wrap: wrap;
 }
+
 
 .card{
     width: 300px;
 } 
+
+
+/* INICIO */
+
+.containerVideo{
+    display: flex;
+    margin: 20px 0 0 0;
+}
+
+.containerVideo video{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.containerVideo img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.d-none{
+    display: none;
+}
+
+/* CARDS*/
+
+.card{
+    margin-bottom: 30px;
+}
+
+.card .card-img-top{
+    width: 100%;
+    height: 400px;
+}
+
+.card .card-body h5{
+    height: 50px;
+}
+
+/* DETALLE DE PRODUCTO */
+.containerDetalle{
+    width: 800px;
+    margin: 20px auto;
+}
