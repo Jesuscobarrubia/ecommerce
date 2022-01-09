@@ -4,20 +4,21 @@ import { getFetch } from "../datos/api";
 
 
 const ItemListContainer = () => {
-
+    
     const [productos, setProductos] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
             getFetch
             .then(data => setProductos(data))
             .catch(error => console.log(error))
-            .finally(() => console.log("finally"))
+            .finally(() => setLoading(false));
     }, []);
 
 
     return(
         <>
-            <ItemList dataProductos={productos}/>
+            {loading ? <h4>Cargando...</h4> : <ItemList dataProductos={productos}/>}            
         </>
     )
 }

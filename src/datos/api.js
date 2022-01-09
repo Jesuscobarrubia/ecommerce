@@ -5,14 +5,15 @@ class Producto {
         this.titulo = item.titulo;
         this.imagen = item.imagen;
         this.precio = item.precio;
+        this.descripcion = item.descripcion;
     }
 
 };
 
 const PRODUCTOS = [
-    new Producto ({id: "1", titulo: "REACT 1", imagen: "../react.png" ,precio: "100", categoria:"perro"}),
-    new Producto ({id: "2", titulo: "REACT 2", imagen: "../react.png" ,precio: "150", categoria:"gato"}),
-    new Producto ({id: "3", titulo: "REACT 3", imagen: "../react.png" , precio: "200", categoria:"perro"})
+    new Producto ({id: "1", titulo: "REACT 1", imagen: "../react.png" ,precio: "100", descripcion: "Descripcion 1"}),
+    new Producto ({id: "2", titulo: "REACT 2", imagen: "../react.png" ,precio: "150", descripcion: "Descripcion 2"}),
+    new Producto ({id: "3", titulo: "REACT 3", imagen: "../react.png" , precio: "200", descripcion: "Descripcion 3"})
 ];
 
 export const getFetch = new Promise((resolve, reject) => {
