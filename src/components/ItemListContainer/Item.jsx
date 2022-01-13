@@ -10,7 +10,7 @@ const Item = ({dataItem}) => {
                     <p className="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae atque sed voluptatum delectus. Rerum aut facere quia a voluptatum quaerat.</p>
                     
                     <Link to={`/detalle/${dataItem.id}`}>
-                        <button className="btn btn-primary btnCompra">Detalle</button>
+                        <button className="btn btn-dark btnCompra">Detalle</button>
                     </Link>
                 </div>
         </div>

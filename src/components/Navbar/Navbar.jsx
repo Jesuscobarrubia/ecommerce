@@ -76,7 +76,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link to='/categoria/serie' className="dropdown-item">
-                        Serie
+                        Series
                       </Link>
                     </li>
                   </ul>

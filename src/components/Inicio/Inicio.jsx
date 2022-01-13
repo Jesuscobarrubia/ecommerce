@@ -1,21 +1,29 @@
 import React from 'react'
+import { useState } from 'react';
 
 const Inicio = () => {
 
-    const logo = () =>{
-        let video = document.getElementById("video");
-        video.classList.add("d-none")
+    const [show, setShow] = useState(true);
 
-        let imagen = document.getElementById("imagen");
-        imagen.classList.remove("d-none");
+    const cambio = () => {
+        setShow(false);
     }
 
 
     return (
-        <div className='containerVideo'>
-            <video src="./inicio/videoInicio.mp4" controls className='videoInicio' autoPlay onEnded={logo} id='video'></video> 
-            <img src="./inicio/banner.jpg" alt="" className='d-none' id='imagen'/>  
-        </div>
+
+        <>
+            <div className='containerVideo'>
+                {show ? 
+
+                <video src="./inicio/videoInicio.mp4" controls className='videoInicio' autoPlay onEnded={cambio}></video> 
+
+                : 
+
+                <img src="./inicio/banner.jpg" alt=""/>
+                }
+            </div>
+        </>
     )
 }
 

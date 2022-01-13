@@ -49,8 +49,9 @@ const PRODUCTOS = [
     new Producto ({id: "26", titulo: "Viuda Negra", imagen: "../fasecuatro/26.jpg" , precio: "200", fase: "FaseCuatro" , categoria: "pelicula" , descripcion: "Entradas"}),
     new Producto ({id: "27", titulo: "What if...?", imagen: "../fasecuatro/27.png" , precio: "200", fase: "FaseCuatro" , categoria: "serie" , descripcion: "Suscripciones"}),
     new Producto ({id: "28", titulo: "Shang Chi", imagen: "../fasecuatro/28.png" , precio: "200", fase: "FaseCuatro" , categoria: "pelicula" , descripcion: "Entradas"}),
-    new Producto ({id: "29", titulo: "Ojo de Halcón", imagen: "../fasecuatro/29.jpg" , precio: "200", fase: "FaseCuatro" , categoria: "serie" , descripcion: "Suscripciones"}),
-    new Producto ({id: "30", titulo: "Spiderman - Sin Camino a Casa", imagen: "../fasecuatro/30.jpg" , precio: "200", fase: "FaseCuatro" , categoria: "pelicula" , descripcion: "Entradas"}),
+    new Producto ({id: "29", titulo: "Eternos", imagen: "../fasecuatro/29.jpg" , precio: "200", fase: "FaseCuatro" , categoria: "pelicula" , descripcion: "Entradas"}),
+    new Producto ({id: "30", titulo: "Ojo de Halcón", imagen: "../fasecuatro/30.jpg" , precio: "200", fase: "FaseCuatro" , categoria: "serie" , descripcion: "Suscripciones"}),
+    new Producto ({id: "31", titulo: "Spiderman - Sin Camino a Casa", imagen: "../fasecuatro/31.jpg" , precio: "200", fase: "FaseCuatro" , categoria: "pelicula" , descripcion: "Entradas"}),
 
 
 

@@ -70,10 +70,6 @@
     margin: 0 auto;
 }
 
-.d-none{
-    display: none;
-}
-
 /* CARDS*/
 
 .card{
@@ -93,4 +89,11 @@
 .containerDetalle{
     width: 800px;
     margin: 20px auto;
+}
+
+/* BOTONES DE FINALIZAR COMPRA O SEGUIR */
+
+.endContinue{
+    display: flex;
+    justify-content: space-around;
 }
