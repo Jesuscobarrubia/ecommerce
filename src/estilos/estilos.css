@@ -23,7 +23,6 @@
 
 .containerCount{
     width: 200px;
-    margin-top: 15px;
     display: flex;
 }
 
@@ -37,7 +36,7 @@
 }
 
 .btn-compra{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .containerCard{
@@ -96,4 +95,16 @@
 .endContinue{
     display: flex;
     justify-content: space-around;
+}
+
+/* LISTA DEL CARRITO */
+
+.listaCarrito{
+    color: rgb(218, 216, 216);
+    background: rgb(33,37,41);
+}
+
+.cantidadAgregada{
+    background: white;
+    color: #000;
 }

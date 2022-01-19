@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../CartContext';
 import ItemCount from '../ItemCount';
 
 
 const ItemDetail = ({informacion}) => {
 
+  const {cartList , agregarAlCarrito} = useCartContext()
+
   const [show, setShow] = useState(true);
 
-  const onAdd = () => {
+  const onAdd = (count) => {
     setShow(false);
-    // agregarAlCarrito({...informacion, cantidad:contador}); --- cantidad
+    agregarAlCarrito({...informacion, cantidad : count});
   }
       
         return (
@@ -28,6 +31,7 @@ const ItemDetail = ({informacion}) => {
                         {informacion.descripcion}
                       </h4>
 
+
                       {show ? 
 
                       <ItemCount initial={1} stock={5} onAdd={onAdd}/> 
@@ -37,7 +41,9 @@ const ItemDetail = ({informacion}) => {
                       <div className='endContinue'>
                         <Link to='/cart'><button className='btn btn-dark btn-compra' type='button'>Terminar la Compra</button></Link>
                         <Link to='/'><button className='btn btn-dark btn-compra' type='button'>Seguir Comprando</button></Link>
-                      </div>}                        
+                      </div>} 
+
+                                             
                     </p>
                   </div>
                 </div>
