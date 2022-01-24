@@ -19,6 +19,7 @@
 
 .cart{
     margin-right: 20px;
+    display: flex;
 }
 
 .containerCount{
@@ -84,6 +85,11 @@
     height: 50px;
 }
 
+.precio{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
 /* DETALLE DE PRODUCTO */
 .containerDetalle{
     width: 800px;
@@ -102,9 +108,48 @@
 .listaCarrito{
     color: rgb(218, 216, 216);
     background: rgb(33,37,41);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete{
+    color: white;
+    outline: none;
+    text-decoration: none;
+}
+
+.delete:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+.delete:hover{
+    color: red;
 }
 
 .cantidadAgregada{
     background: white;
     color: #000;
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    right: 11px;
+    font-size: 17px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    padding: 1px;
+    width: 20px;
+}
+
+.cajaVacio{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cajaTotal{
+    text-align: center;
 }

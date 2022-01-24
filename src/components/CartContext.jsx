@@ -38,8 +38,31 @@ export const CartContextProvider = ({children}) => {
         setcartList([]);
     }
 
+    const deleteItem = (id) => {
+        const itemBorrado = cartList.filter((producto) => producto.id !== id)
+        setcartList(itemBorrado);
+    }
+
+    const totalPagar = () => {
+        let count = 0;
+        cartList.forEach((item) => {
+            count += item.precio * item.cantidad;
+        })
+        return count;
+    }
+
+    const totalCarrito = () => {
+        let count = 0;
+        cartList.forEach((item) => {
+            count += item.cantidad;
+        })
+        return count;
+    }
+
+
+
     return(
-        <CartContext.Provider value={{cartList, agregarAlCarrito, vaciarCarrito}}>
+        <CartContext.Provider value={{cartList, agregarAlCarrito, vaciarCarrito, deleteItem, totalPagar, totalCarrito}}>
             {children}
         </CartContext.Provider>
     )

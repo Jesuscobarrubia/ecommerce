@@ -30,6 +30,7 @@ const ItemDetail = ({informacion}) => {
                       <h4 className="">
                         {informacion.descripcion}
                       </h4>
+                      <h4 className='precio'>${informacion.precio}</h4>
 
 
                       {show ? 
