@@ -18,7 +18,7 @@ const PRODUCTOS = [
     new Producto ({id: "1", titulo: "Iron Man", imagen: "../faseuno/1.png" ,precio: "100", fase: "FaseUno" , categoria: "pelicula" , descripcion: "Entradas"}),
     new Producto ({id: "2", titulo: "Iron Man 2", imagen: "../faseuno/2.jpg" ,precio: "150", fase: "FaseUno" , categoria: "pelicula" , descripcion: "Entradas"}),
     new Producto ({id: "3", titulo: "Thor", imagen: "../faseuno/3.jpg" , precio: "100", fase: "FaseUno" , categoria: "pelicula" , descripcion: "Entradas"}),
-    new Producto ({id: "4", titulo: "Capitan America - El Primer Vengador", imagen: "../faseuno/4.jpg" , precio: "200", descripcion: "FaseUno" , categoria: "pelicula" , descripcion: "Entradas"}),
+    new Producto ({id: "4", titulo: "Capitan America - El Primer Vengador", imagen: "../faseuno/4.jpg" , precio: "200", fase: "FaseUno" , categoria: "pelicula" , descripcion: "Entradas"}),
     new Producto ({id: "5", titulo: "Los Vengadores", imagen: "../faseuno/5.jpg" , precio: "150", fase: "FaseUno" , categoria: "pelicula" , descripcion: "Entradas"}),
 
     /* FASE DOS  */
