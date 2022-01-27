@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { getFetch } from "../../datos/api";
 import { useParams } from "react-router-dom";
 import { getFirestore, query, collection, getDocs, where } from "firebase/firestore"
+import {BeatLoader} from 'react-spinners';
 
 
 const ItemListContainer = () => {
@@ -60,7 +61,7 @@ const ItemListContainer = () => {
 
     return(
         <>
-            {loading ? <h4>Cargando...</h4> : <ItemList dataProductos={productos}/>}            
+            {loading ? <div className='spinner'><BeatLoader></BeatLoader></div> : <ItemList dataProductos={productos}/>}            
         </>
     )
 }

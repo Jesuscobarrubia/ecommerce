@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useParams } from "react-router-dom";
 import { getFetch } from '../../datos/api'
 import ItemDetail from './ItemDetail'
+import { BeatLoader } from 'react-spinners';
 
 const ItemDetailContainer = () => {
 
@@ -24,7 +25,6 @@ const ItemDetailContainer = () => {
             // .then(data => setProducto(data.find(prod => prod.id === idDetalle)))
             // .catch(error => console.log(error))
             // .finally(() => setLoading(false));
-
             setLoading(false);
         }, 2000);
     }, []);
@@ -32,7 +32,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div>            
-            {loading ? <h4>Cargando...</h4> : <ItemDetail informacion={producto}/>} 
+            {loading ? <div className='spinner'><BeatLoader></BeatLoader></div> : <ItemDetail informacion={producto}/>} 
         </div>
     )
 }
