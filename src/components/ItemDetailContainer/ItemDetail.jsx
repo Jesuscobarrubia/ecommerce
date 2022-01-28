@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCartContext } from '../CartContext';
 import ItemCount from '../ItemCount';
 
-
 const ItemDetail = ({informacion}) => {
 
-  const {cartList , agregarAlCarrito} = useCartContext()
+  const {agregarAlCarrito} = useCartContext()
 
   const [show, setShow] = useState(true);
 
@@ -20,7 +19,7 @@ const ItemDetail = ({informacion}) => {
             <div className="card mb-3 containerDetalle">
               <div className="row g-0">
                 <div className="col-md-4">
-                  <img src={informacion.img} className="img-fluid rounded-start" alt="..."/>
+                  <img src={informacion.img} className="img-fluid rounded-start"/>
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">
@@ -34,17 +33,15 @@ const ItemDetail = ({informacion}) => {
 
 
                       {show ? 
-
+                      //TRUE
                       <ItemCount initial={1} stock={5} onAdd={onAdd}/> 
 
                       : 
-
+                      //FALSE
                       <div className='endContinue'>
                         <Link to='/cart'><button className='btn btn-dark btn-compra' type='button'>Terminar la Compra</button></Link>
                         <Link to='/'><button className='btn btn-dark btn-compra' type='button'>Seguir Comprando</button></Link>
-                      </div>} 
-
-                                             
+                      </div>}                                              
                     </p>
                   </div>
                 </div>

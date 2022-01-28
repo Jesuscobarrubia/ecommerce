@@ -44,7 +44,7 @@ const PRODUCTOS = [
 
     /* FASE CUATRO  */
     new Producto ({id: "23", titulo: "WandaVision", imagen: "../fasecuatro/23.png" ,precio: "400", fase: "FaseCuatro" , categoria: "serie" , descripcion: "Suscripción por mes"}),
-    new Producto ({id: "24", titulo: "Falcon y el Soldado de Invierno", imagen: "../fasecuatro/24.jpg" ,precio: "450", fase: "FaseCuatro" , categoria: "pelicula" , descripcion: "Suscripción por mes"}),
+    new Producto ({id: "24", titulo: "Falcon y el Soldado de Invierno", imagen: "../fasecuatro/24.jpg" ,precio: "450", fase: "FaseCuatro" , categoria: "serie" , descripcion: "Suscripción por mes"}),
     new Producto ({id: "25", titulo: "Loki", imagen: "../fasecuatro/25.jpg" , precio: "400", fase: "FaseCuatro" , categoria: "serie" , descripcion: "Suscripción por mes"}),
     new Producto ({id: "26", titulo: "Viuda Negra", imagen: "../fasecuatro/26.jpg" , precio: "450", fase: "FaseCuatro" , categoria: "pelicula" , descripcion: "Entradas"}),
     new Producto ({id: "27", titulo: "What if...?", imagen: "../fasecuatro/27.png" , precio: "400", fase: "FaseCuatro" , categoria: "serie" , descripcion: "Suscripción por mes"}),

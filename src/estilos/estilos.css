@@ -158,3 +158,19 @@
     margin-top: 150px;
     text-align: center;
 }
+
+.vaciarFinalizar{
+    text-align: center;
+}
+
+.vaciarFinalizar .vaciar{
+    margin-right: 30px;
+}
+
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #000;
+    font-size: 12px;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}

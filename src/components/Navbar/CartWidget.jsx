@@ -25,10 +25,13 @@ const CartWidget = () => {
                 </a>
 
                 {
-                    vacio? <span></span>:<span className="circle">{totalCarrito()}</span>
-                }
-
-                
+                    vacio ? 
+                    //TRUE
+                    <span></span>
+                    :
+                    //FALSE
+                    <span className="circle">{totalCarrito()}</span>
+                }                
             </button>
         </div>
     )

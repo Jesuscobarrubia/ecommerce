@@ -1,12 +1,44 @@
 import { useCartContext } from "../CartContext"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { getFirestore, collection, addDoc } from "firebase/firestore"
+import swal from 'sweetalert';
 
 
 const Cart = () => {
 
     const {cartList, vaciarCarrito, deleteItem, totalPagar} = useCartContext()
     const [vacio, setVacio] = useState(true)
+
+    const realizarCompra = () => {
+        let orden = {}
+    
+        orden.buyer = {nombre: 'Jesus', email: 'jesus@gmail.com' , telefono: '123456789'}
+        orden.total = totalPagar()
+    
+        orden.items = cartList.map(item => {
+            const id = item.id;
+            const nombre = item.titulo;
+            const precio = item.precio * item.cantidad;
+    
+            return {id, nombre, precio}
+        })
+
+        const dataBase = getFirestore();
+        const odenColletion = collection(dataBase, 'ordenes'); 
+        addDoc(odenColletion, orden)
+        .then((resp) => {
+            swal({
+                title: "¡Tu compra ha sido confirmada!",
+                text: "Numero de orden: " + resp.id,
+                icon: "success",
+                button: "Finalizar",
+              });
+        })
+        .catch(err => console.log(err))
+        .finally(() => vaciarCarrito())
+    }
+
 
     useEffect(() => {
        if(cartList.length > 0){
@@ -20,7 +52,8 @@ const Cart = () => {
     return (
         <>
             {
-                vacio? 
+                vacio ?
+                //TRUE 
                 <div>
                     <div class="container card cajaVacio">
                         <div class="card-body">
@@ -34,6 +67,7 @@ const Cart = () => {
                     </div>
                 </div>
                 :
+                //FALSE
                 <>
                     {cartList.map(item =>
 
@@ -52,10 +86,11 @@ const Cart = () => {
 
                     <div className="container d-flex justify-content-center mt-4">
                         <h3>Total: ${totalPagar()}</h3>
-                        </div>
+                    </div>
                         
-                        <div className="container d-flex justify-content-center">
-                        <button onClick={vaciarCarrito} className="btn btn-dark">Vaciar Carrito</button>
+                    <div className="container vaciarFinalizar">
+                        <button onClick={vaciarCarrito} className="btn btn-dark vaciar">Vaciar Carrito</button>
+                        <button onClick={realizarCompra} className="btn btn-dark">Generar Orden</button>
                     </div>  
                 </>
 

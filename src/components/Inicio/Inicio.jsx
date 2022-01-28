@@ -1,8 +1,6 @@
-import React from 'react'
 import { useState } from 'react';
 
 const Inicio = () => {
-
     const [show, setShow] = useState(true);
 
     const cambio = () => {
@@ -11,19 +9,16 @@ const Inicio = () => {
 
 
     return (
+        <div className='containerVideo'>
+            {show ? 
 
-        <>
-            <div className='containerVideo'>
-                {show ? 
+            <video src="./inicio/videoInicio.mp4" controls className='videoInicio' autoPlay onEnded={cambio}></video> 
 
-                <video src="./inicio/videoInicio.mp4" controls className='videoInicio' autoPlay onEnded={cambio}></video> 
+            : 
 
-                : 
-
-                <img src="./inicio/banner.jpg" alt=""/>
-                }
-            </div>
-        </>
+            <img src="./inicio/banner.jpg" alt=""/>
+            }
+        </div>
     )
 }
 

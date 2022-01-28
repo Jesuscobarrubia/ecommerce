@@ -1,7 +1,5 @@
 //CREACION DEL CONTEXTO
-import { useContext } from "react";
-import { useState } from "react";
-import { createContext } from "react";
+import { useContext, useState, createContext } from "react";
 
 export const CartContext = createContext([]);
 
@@ -14,8 +12,8 @@ export const useCartContext = () => {
 export const CartContextProvider = ({children}) => {
     //ESTADOS Y FUNCIONES GLOBALES
     const [cartList, setcartList] = useState ([]);
-
-
+    
+    //AGREGA ITEMS AL CARRITO
     const agregarAlCarrito = (items) => {
 
         const indice = cartList.findIndex(i => i.id === items.id)
@@ -34,15 +32,18 @@ export const CartContextProvider = ({children}) => {
         }
     }
 
+    //ELIMINA TODOS LOS ITEMS DEL CARRITO
     const vaciarCarrito = () => {
         setcartList([]);
     }
 
+    //ELIMINA UN ITEM DEL CARRITO
     const deleteItem = (id) => {
         const itemBorrado = cartList.filter((producto) => producto.id !== id)
         setcartList(itemBorrado);
     }
 
+    //MONTO A PAGAR
     const totalPagar = () => {
         let count = 0;
         cartList.forEach((item) => {
@@ -51,6 +52,7 @@ export const CartContextProvider = ({children}) => {
         return count;
     }
 
+    //CANTIDAD DE ITEMS EN EL CARRITO
     const totalCarrito = () => {
         let count = 0;
         cartList.forEach((item) => {
@@ -58,8 +60,6 @@ export const CartContextProvider = ({children}) => {
         })
         return count;
     }
-
-
 
     return(
         <CartContext.Provider value={{cartList, agregarAlCarrito, vaciarCarrito, deleteItem, totalPagar, totalCarrito}}>
