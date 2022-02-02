@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { getFirestore, query, collection, getDocs, where } from "firebase/firestore"
+import ItemList from "./ItemList";
 import {BeatLoader} from 'react-spinners';
 
 
@@ -9,7 +9,6 @@ const ItemListContainer = () => {
     
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true);
-
     const {idCategoria , idFase} = useParams();
 
     useEffect(() => {
@@ -37,7 +36,6 @@ const ItemListContainer = () => {
         }
 
     }, [idCategoria , idFase]);
-
 
     return(
         <>

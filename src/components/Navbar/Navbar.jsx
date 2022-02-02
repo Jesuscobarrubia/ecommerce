@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <header className="container-fluid">
-        <Link to="/inicio">
+        <Link to="/">
             <img src="../logo.png" alt="Marvel" className="logo" />
         </Link>
 
@@ -25,12 +25,12 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link to='/inicio' className="nav-link active" aria-current="page" href="#">
+                  <Link to='/' className="nav-link active" aria-current="page" href="#">
                     Inicio
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/' className="nav-link" href="#">
+                  <Link to='/universo' className="nav-link" href="#">
                     Universo Cinematografico
                   </Link>
                 </li>

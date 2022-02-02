@@ -1,43 +1,12 @@
-import { useCartContext } from "../CartContext"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { getFirestore, collection, addDoc } from "firebase/firestore"
-import swal from 'sweetalert';
+import { useCartContext } from "../CartContext"
 
 
 const Cart = () => {
 
     const {cartList, vaciarCarrito, deleteItem, totalPagar} = useCartContext()
     const [vacio, setVacio] = useState(true)
-
-    const realizarCompra = () => {
-        let orden = {}
-    
-        orden.buyer = {nombre: 'Jesus', email: 'jesus@gmail.com' , telefono: '123456789'}
-        orden.total = totalPagar()
-    
-        orden.items = cartList.map(item => {
-            const id = item.id;
-            const nombre = item.titulo;
-            const precio = item.precio * item.cantidad;
-    
-            return {id, nombre, precio}
-        })
-
-        const dataBase = getFirestore();
-        const odenColletion = collection(dataBase, 'ordenes'); 
-        addDoc(odenColletion, orden)
-        .then((resp) => {
-            swal({
-                title: "¡Tu compra ha sido confirmada!",
-                text: "Numero de orden: " + resp.id,
-                icon: "success",
-                button: "Finalizar",
-              });
-        })
-        .catch(err => console.log(err))
-        .finally(() => vaciarCarrito())
-    }
 
 
     useEffect(() => {
@@ -80,7 +49,7 @@ const Cart = () => {
                             </svg>
                         </button>
                     </li>
-                    <li className="list-group-item listaCarrito cantidadAgregada">Cantidad: {item.cantidad} - Precio: ${item.precio}</li>
+                    <li className="list-group-item listaCarrito cantidadAgregada"><span><b>Cantidad:</b> {item.cantidad}</span><span><b>Precio:</b> ${item.precio}</span><span><b>Subtotal:</b> ${item.cantidad * item.precio}</span></li>
                     </ul>
                     )}  
 
@@ -90,7 +59,7 @@ const Cart = () => {
                         
                     <div className="container vaciarFinalizar">
                         <button onClick={vaciarCarrito} className="btn btn-dark vaciar">Vaciar Carrito</button>
-                        <button onClick={realizarCompra} className="btn btn-dark">Generar Orden</button>
+                        <Link to='/orden' className="btn btn-dark">Realizar Pedido</Link>
                     </div>  
                 </>
 

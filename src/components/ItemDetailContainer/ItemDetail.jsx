@@ -34,13 +34,12 @@ const ItemDetail = ({informacion}) => {
 
                       {show ? 
                       //TRUE
-                      <ItemCount initial={1} stock={5} onAdd={onAdd}/> 
-
+                      <ItemCount initial={1} stock={5} onAdd={onAdd}/>
                       : 
                       //FALSE
                       <div className='endContinue'>
                         <Link to='/cart'><button className='btn btn-dark btn-compra' type='button'>Terminar la Compra</button></Link>
-                        <Link to='/'><button className='btn btn-dark btn-compra' type='button'>Seguir Comprando</button></Link>
+                        <Link to='/universo'><button className='btn btn-dark btn-compra' type='button'>Seguir Comprando</button></Link>
                       </div>}                                              
                     </p>
                   </div>

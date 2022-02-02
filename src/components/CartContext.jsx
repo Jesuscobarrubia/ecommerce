@@ -20,14 +20,12 @@ export const CartContextProvider = ({children}) => {
         
         if(indice > -1){
             const cantidadVieja = cartList[indice].cantidad
-
             let cantidadNueva = cantidadVieja + items.cantidad
-
             cartList[indice].cantidad = cantidadNueva
-
             let arrayNuevo = [...cartList]
             setcartList(arrayNuevo)
-        } else {
+
+        } else {            
             setcartList([...cartList, items]);
         }
     }

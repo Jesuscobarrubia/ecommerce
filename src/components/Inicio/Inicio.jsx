@@ -7,15 +7,13 @@ const Inicio = () => {
         setShow(false);
     }
 
-
     return (
         <div className='containerVideo'>
             {show ? 
-
-            <video src="./inicio/videoInicio.mp4" controls className='videoInicio' autoPlay onEnded={cambio}></video> 
-
+            //TRUE
+            <video src="./inicio/videoInicio.mp4" autoPlay muted controls className='videoInicio' onEnded={cambio}></video> 
             : 
-
+            //FALSE
             <img src="./inicio/banner.jpg" alt=""/>
             }
         </div>

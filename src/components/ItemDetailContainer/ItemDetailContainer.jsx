@@ -24,7 +24,12 @@ const ItemDetailContainer = () => {
 
     return (
         <div>            
-            {loading ? <div className='spinner'><BeatLoader></BeatLoader></div> : <ItemDetail informacion={producto}/>} 
+            {loading ? 
+            //TRUE
+            <div className='spinner'><BeatLoader></BeatLoader></div> 
+            :
+            //FALSE
+            <ItemDetail informacion={producto}/>} 
         </div>
     )
 }

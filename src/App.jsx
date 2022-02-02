@@ -5,6 +5,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import Cart from "./components/Navbar/Cart";
 import Inicio from "./components/Inicio/Inicio";
 import { CartContextProvider } from "./components/CartContext";
+import Orden from "./components/Orden";
 
 
 
@@ -16,12 +17,13 @@ const App = () => {
           <Navbar/>
 
           <Routes>
-            <Route exact path='/inicio' element={<Inicio/>}/>
-            <Route exact path='/' element={<ItemListContainer/>}/>
+            <Route exact path='/' element={<Inicio/>}/>
+            <Route exact path='/universo' element={<ItemListContainer/>}/>
             <Route exact path='/categoria/:idCategoria' element={<ItemListContainer/>}/>
             <Route exact path='/fase/:idFase' element={<ItemListContainer/>}/>
             <Route exact path='/detalle/:idDetalle' element={<ItemDetailContainer/>}/>
             <Route exact path='/cart' element={<Cart/>}/>
+            <Route exact path='/orden' element={<Orden/>}/>
           </Routes> 
       </BrowserRouter>
 
