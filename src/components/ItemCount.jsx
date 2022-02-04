@@ -22,22 +22,20 @@
     
      //LIMITACION DE STOCK
     useEffect(() => {
-    if ( count === 1 ){
-        console.log("No puedes comprar menos de 1");
-        setBotonActivoB(false)
-        
-    }else if ( count > stock ){
-        console.log("No puedes comprar más de 6");
-        setBotonActivoS(false)
-    }
-    } , [count])
+        if ( count === 1 ){
+            setBotonActivoB(false)
+            
+        }else if ( count > stock ){
+            setBotonActivoS(false)
+        }
+    } , [stock, count])
 
      return (
          <>
             <div className='containerCount'>
                  <div className="gap-2 contentCount">
                      <button className="btn btn-dark" type="button" onClick={baja} disabled={!botonActivoB}>-</button>
-                     <input type="text" value={count} className='text-center'/>
+                        <span className='text-center casillaCount'>{count}</span>
                      <button className="btn btn-dark" type="button" onClick={sube} disabled={!botonActivoS}>+</button>
                      <h6 className='mt-1'>Disponible - {max}</h6>
                  </div>

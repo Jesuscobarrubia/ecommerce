@@ -38,7 +38,7 @@ const Orden = () => {
                 //VALIDACION TELEFONO
                 if(!valores.telefono) {
                     errores.telefono = 'El numero de telefono es obligatorio'
-                } else if (!/^11(\d{8})$/.test(valores.telefono)){
+                } else if (!/^(\d{10})$/.test(valores.telefono)){
                     errores.telefono = 'El numero de telefono debe tener al menos 10 digitos'
                 }
 
@@ -80,7 +80,7 @@ const Orden = () => {
                 .catch(err => console.log(err))
                 setTimeout(() => {
                     resetForm()   
-                    vaciarCarrito()                
+                    vaciarCarrito()        
                 }, 2000);
             }
             }
@@ -89,23 +89,23 @@ const Orden = () => {
             {({handleSubmit, handleChange, values, handleBlur, errors, touched}) => (
                 <form className="container" onSubmit={handleSubmit}>
                     <div className="form-group mt-2">
-                        <label for="nombreApellido">Nombre y Apellido</label>
-                        <input type="text" className="form-control mt-1" id="nombreApellido" placeholder="" onChange={handleChange}
+                        <label htmlFor="nombreApellido">Nombre y Apellido</label>
+                        <input type="text" className="form-control mt-1" id="nombreApellido" onChange={handleChange}
                         onBlur={handleBlur} name="nombre" value={values.nombre}/>
                         {touched.nombre && errors.nombre && <p className="text-danger">{errors.nombre}</p>}
                     </div>
                     <div className="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" className="form-control mt-1" id="email" placeholder="" onChange={handleChange} onBlur={handleBlur} name="email" value={values.email}/>
+                        <label htmlFor="email">Email</label>
+                        <input type="email" className="form-control mt-1" id="email"  onChange={handleChange} onBlur={handleBlur} name="email" value={values.email}/>
                         {touched.email && errors.email && <p className="text-danger">{errors.email}</p>}
                     </div>
                     <div className="form-group">
-                        <label for="telefono">Telefono</label>
-                        <input type="number" className="form-control mt-1" id="telefono" placeholder="" onChange={handleChange} onBlur={handleBlur} name="telefono" value={values.telefono}/>
+                        <label htmlFor="telefono">Telefono</label>
+                        <input type="number" className="form-control mt-1" id="telefono" onChange={handleChange} onBlur={handleBlur} name="telefono" value={values.telefono}/>
                         {touched.telefono && errors.telefono && <p className="text-danger">{errors.telefono}</p>}
                     </div>
                     <div className="form-check mt-3">
-                        <label for="checked">Acepto los Terminos y Condiciones</label>
+                        <label htmlFor="checked">Acepto los Terminos y Condiciones</label>
                         <input type="checkbox" className="form-check-input" id="checked" onChange={handleChange} onBlur={handleBlur} name="checked" value={values.checked}/>
                         {touched.checked && errors.checked && <p className="text-danger">{errors.checked}</p>}
                     </div>

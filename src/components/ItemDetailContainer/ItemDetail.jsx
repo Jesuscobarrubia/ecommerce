@@ -19,13 +19,13 @@ const ItemDetail = ({informacion}) => {
             <div className="card mb-3 containerDetalle">
               <div className="row g-0">
                 <div className="col-md-4">
-                  <img src={informacion.img} className="img-fluid rounded-start"/>
+                  <img src={informacion.img} alt={informacion.titulo} className="img-fluid rounded-start"/>
                 </div>
                 <div className="col-md-8">
                   <div className="card-body">
                     <h5 className="card-title">{informacion.titulo}</h5>
                     <p className="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas ea, laudantium aliquid esse aut officiis optio possimus, totam officia corporis voluptates.</p>
-                    <p className="card-text">
+                    <div className="card-text">
                       <h4 className="">
                         {informacion.descripcion}
                       </h4>
@@ -39,9 +39,9 @@ const ItemDetail = ({informacion}) => {
                       //FALSE
                       <div className='endContinue'>
                         <Link to='/cart'><button className='btn btn-dark btn-compra' type='button'>Terminar la Compra</button></Link>
-                        <Link to='/universo'><button className='btn btn-dark btn-compra' type='button'>Seguir Comprando</button></Link>
+                        <Link to='/fase'><button className='btn btn-dark btn-compra' type='button'>Seguir Comprando</button></Link>
                       </div>}                                              
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>

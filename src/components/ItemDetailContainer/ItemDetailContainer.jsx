@@ -19,7 +19,7 @@ const ItemDetailContainer = () => {
             .then(resp => setProducto({id: resp.id, ...resp.data()}))
             setLoading(false);
         }, 2000);
-    }, []);
+    }, [idDetalle]);
 
 
     return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getFirestore, query, collection, getDocs, where } from "firebase/firestore"
+import { getFirestore, query, collection, getDocs, where, orderBy } from "firebase/firestore"
 import ItemList from "./ItemList";
 import {BeatLoader} from 'react-spinners';
 
@@ -28,7 +28,7 @@ const ItemListContainer = () => {
             .finally(() => setLoading(false));
         }else{
             const dataBase = getFirestore();
-            const queryCollection = query(collection(dataBase, 'items'));
+            const queryCollection = query(collection(dataBase, 'items'), orderBy("orden", "asc"));
             getDocs(queryCollection)
             .then(res => setProductos(res.docs.map(prod => ({id: prod.id, ...prod.data()}))))
             .catch(err => console.log(err))

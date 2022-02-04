@@ -4,7 +4,7 @@ const Item = ({dataItem}) => {
 
     return(
         <div className="card">
-            <img className="card-img-top" src={dataItem.img} alt="Card image cap"/>
+            <img className="card-img-top" src={dataItem.img} alt="Marvel"/>
                 <div className="card-body">
                     <h5 className="card-title">{dataItem.titulo}</h5>
                     <p className="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae atque sed voluptatum delectus. Rerum aut facere quia a voluptatum quaerat.</p>

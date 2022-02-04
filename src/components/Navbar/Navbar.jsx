@@ -30,7 +30,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link to='/universo' className="nav-link" href="#">
+                  <Link to='/fase' className="nav-link" href="#">
                     Universo Cinematografico
                   </Link>
                 </li>
@@ -55,16 +55,14 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
+                  <button
+                    className="nav-link btn btn-dark dropdown-toggle"
                     id="navbarDropdownMenuLink"
-                    role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     Categoria
-                  </a>
+                  </button>
                   <ul
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdownMenuLink"
