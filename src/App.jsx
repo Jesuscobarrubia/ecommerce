@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Navbar from "./components/Navbar/Navbar";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
@@ -9,8 +9,8 @@ import Orden from "./components/Orden";
 
 const App = () => {
   return (
-    <CartContextProvider>
-      <BrowserRouter>
+    <CartContextProvider>  
+      <HashRouter>
           <Navbar/>
           <Routes>
             <Route exact path='/' element={<Inicio/>}/>
@@ -21,7 +21,7 @@ const App = () => {
             <Route exact path='/cart' element={<Cart/>}/>
             <Route exact path='/orden' element={<Orden/>}/>
           </Routes> 
-      </BrowserRouter>
+      </HashRouter>
     </CartContextProvider>
 
   );
