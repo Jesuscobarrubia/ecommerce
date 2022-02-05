@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <header className="container-fluid">
         <Link to="/">
-            <img src="../logo.png" alt="Marvel" className="logo" />
+            <img src="/ecommerce/logo.png" alt="Marvel" className="logo" />
         </Link>
 
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

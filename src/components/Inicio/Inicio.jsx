@@ -11,10 +11,10 @@ const Inicio = () => {
         <div className='containerVideo'>
             {show ? 
             //TRUE
-            <video src="./inicio/videoInicio.mp4" autoPlay muted controls className='videoInicio' onEnded={cambio}></video> 
+            <video src="/ecommerce/inicio/videoInicio.mp4" autoPlay muted controls className='videoInicio' onEnded={cambio}></video> 
             : 
             //FALSE
-            <img src="./inicio/banner.jpg" alt=""/>
+            <img src="/ecommerce/inicio/banner.jpg" alt="Banner"/>
             }
         </div>
     )
