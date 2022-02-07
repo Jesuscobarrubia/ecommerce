@@ -9,7 +9,7 @@ const Navbar = () => {
             <img src="/ecommerce/logo.png" alt="Marvel" className="logo" />
         </Link>
 
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <div className="container-fluid">
             <button
               className="navbar-toggler"

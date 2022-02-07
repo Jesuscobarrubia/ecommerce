@@ -16,7 +16,7 @@ const ItemDetail = ({informacion}) => {
       
         return (
           <>
-            <div className="card mb-3 containerDetalle">
+            <div className="card mb-3 container containerDetalle">
               <div className="row g-0">
                 <div className="col-md-4">
                   <img src={informacion.img} alt={informacion.titulo} className="img-fluid rounded-start"/>
